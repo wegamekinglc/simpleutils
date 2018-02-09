@@ -20,3 +20,14 @@ def to_datetime(date):
         return dt.datetime(date.year, date.month, date.day, date.hour, date.minute, date.second)
     else:
         return dt.datetime(date.year, date.month, date.day)
+
+
+def list_eq(lhs, rhs):
+
+    if len(lhs) != len(rhs):
+        return False
+
+    for i, v1 in enumerate(lhs):
+        if v1 != rhs[i]:
+            return False
+    return True
