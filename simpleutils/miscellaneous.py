@@ -24,6 +24,9 @@ def to_datetime(date):
 
 def list_eq(lhs, rhs):
 
+    if not lhs and not rhs:
+        return True
+
     if len(lhs) != len(rhs):
         return False
 
