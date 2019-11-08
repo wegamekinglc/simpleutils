@@ -8,10 +8,16 @@ Created on 2017-5-7
 import logging
 
 
-class CustomLogger(object):
+class CustomLogger:
     def __init__(self,
-                 logger_name,
-                 log_level):
+                 logger_name: str,
+                 log_level: str):
+        """
+        Initialize the logger
+
+        :param logger_name: str
+        :param log_level: srt
+        """
         self.logger = logging.getLogger(logger_name)
         ch = logging.StreamHandler()
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -19,7 +25,7 @@ class CustomLogger(object):
         self.logger.addHandler(ch)
         self.set_level(log_level)
 
-    def set_level(self, log_level):
+    def set_level(self, log_level: str):
         if log_level.lower() == "info":
             self.logger.setLevel(logging.INFO)
         elif log_level.lower() == "warning":
@@ -29,14 +35,14 @@ class CustomLogger(object):
         elif log_level.lower() == 'debug':
             self.logger.setLevel(logging.DEBUG)
 
-    def info(self, msg):
+    def info(self, msg: str):
         self.logger.info(msg)
 
-    def warning(self, msg):
+    def warning(self, msg: str):
         self.logger.warning(msg)
 
-    def critical(self, msg):
+    def critical(self, msg: str):
         self.logger.critical(msg)
 
-    def debug(self, msg):
+    def debug(self, msg: str):
         self.logger.debug(msg)

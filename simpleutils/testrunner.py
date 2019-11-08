@@ -7,13 +7,22 @@ Created on 2017-5-7
 
 import sys
 import unittest
+from typing import List
+from typing import Type
+from simpleutils.logger import CustomLogger
 
 
-class TestRunner(object):
+class TestRunner:
 
     def __init__(self,
-                 test_cases,
-                 logger):
+                 test_cases: List[Type[unittest.TestCase]],
+                 logger: CustomLogger):
+        """
+        Convenient unittests runner for unittests
+
+        :param test_cases: List[Type[unittest.TestCase]]
+        :param logger: CustomLogger
+        """
         self.suite = unittest.TestSuite()
         self.logger = logger
         for case in test_cases:
