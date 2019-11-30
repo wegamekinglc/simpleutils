@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='simpleutils',
-    version='0.2.2',
+    version='0.2.3',
     packages=find_packages(),
     url='',
     license='MIT',
