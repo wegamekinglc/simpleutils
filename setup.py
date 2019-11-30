@@ -1,3 +1,4 @@
+import io
 from setuptools import setup
 from setuptools import find_packages
 
@@ -9,5 +10,6 @@ setup(
     license='MIT',
     author='wegamekinglc',
     author_email='wegamekinglc@hotmail.com',
+    install_requires=io.open("requirements.txt", encoding='utf8').read(),
     description=''
 )
