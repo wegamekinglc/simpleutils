@@ -41,6 +41,9 @@ class CustomLogger:
     def warning(self, msg: str):
         self.logger.warning(msg)
 
+    def error(self, msg: str):
+        self.logger.error(msg)
+
     def critical(self, msg: str):
         self.logger.critical(msg)
 
