@@ -13,13 +13,15 @@ from simpleutils.logger import CustomLogger
 
 
 class TestRunner:
+    """
+    simple test runner wrapper for python unit tests
+    """
 
     def __init__(self,
                  test_cases: List[Type[unittest.TestCase]],
                  logger: CustomLogger):
         """
         Convenient unittests runner for unittests
-
         :param test_cases: List[Type[unittest.TestCase]]
         :param logger: CustomLogger
         """

@@ -5,7 +5,7 @@ Created on 2019-11-27
 @author: cheng.li
 """
 
-from simpleutils.miscellaneous import (
+from simpleutils.time import (
     dt2unix,
     unix2dt
 )

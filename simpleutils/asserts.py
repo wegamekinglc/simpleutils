@@ -8,8 +8,8 @@ Created on 2019-11-8
 
 def require(cond: bool, exception=AssertionError, msg: str = None):
     """
-    Deliberately defined assert function which will never be omitted by python interpreter
-
+    Deliberately defined assert function which will never be omitted by python interpreter and
+    raise custom type exception
     :param cond: bool
     :param exception: Exception type which will be raised
     :param msg: str
@@ -19,7 +19,7 @@ def require(cond: bool, exception=AssertionError, msg: str = None):
         raise exception(msg)
 
 
-def is_close(x: float, y: float, absolute: float = 1e-12):
+def is_close(x: float, y: float, absolute: float = 1e-12) -> bool:
     """
     Check whether 2 float numbers are close enough
 
