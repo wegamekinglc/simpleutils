@@ -1,3 +1,1 @@
 pendulum
-pytest
-pytest-runner
