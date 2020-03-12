@@ -11,18 +11,24 @@ import logging
 class CustomLogger:
     def __init__(self,
                  logger_name: str,
-                 log_level: str):
+                 log_level: str,
+                 log_file: str = None):
         """
         Initialize the logger
 
         :param logger_name: str
         :param log_level: srt
+        :param log_file: str
         """
         self.logger = logging.getLogger(logger_name)
         ch = logging.StreamHandler()
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         ch.setFormatter(formatter)
         self.logger.addHandler(ch)
+        if log_file:
+            fh = logging.FileHandler(log_file)
+            fh.setFormatter(formatter)
+            self.logger.addHandler(fh)
         self.set_level(log_level)
 
     def set_level(self, log_level: str):

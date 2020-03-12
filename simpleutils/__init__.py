@@ -11,4 +11,4 @@ from simpleutils.miscellaneous import to_datetime
 from simpleutils.testrunner import TestRunner
 
 
-__version__ = '0.2.4'
+__version__ = '0.2.5'
